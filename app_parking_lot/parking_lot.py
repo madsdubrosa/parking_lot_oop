@@ -22,24 +22,19 @@ class ParkingLot:
         self.revenue = 0
 
     def _generate_spot(self, vehicle, duration, delta_days=0):
-        # check and update empty spots and decrement the appropriate counter by 1
         vehicle_type = vehicle.vehicle_type
         levels = [l for l, d in self.level_to_duration.items() if d == duration]  # [1]; [2]; [3, 4]
         spot_level = None
         for level in levels:
             if level != 3:
-                # check here and if we can't park then too bad
                 if self.empty_spots[level][vehicle_type] > 0:
-                    # now we can assign the spot
                     self.empty_spots[level][vehicle_type] -= 1
                     spot_level = level
                 else:
                     print("Lot is full.")
                     return
             else:  # level 3
-                # check to see if you can park, if not move to 4
                 if self.empty_spots[level][vehicle_type] > 0:
-                    # now we can assign the spot
                     self.empty_spots[level][vehicle_type] -= 1
                     spot_level = level
                     break
@@ -78,7 +73,7 @@ class ParkingLot:
     def extend_spot(self, license_plate, more_time):
         """
         case 1: original duration == more_time
-            ez thing to do, keep the spot and get more money
+            easy thing to do, keep the spot and get more money
         case 2: original duration != more_time ; ex: orig: annual, extended: monthly
             A) monthly spot is unavailable  --> ask if they wanna change duration, move to daily
                 (what if the daily is also packed), or kick them out (we pick this one)
