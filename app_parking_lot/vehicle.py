@@ -19,21 +19,3 @@ class Vehicle:
 
     def leave_parking_spot(self):
         self.parking_spot_number = None
-
-
-"""************UNUSED CLASSES************"""
-
-
-class Bike(Vehicle):
-    def __init__(self, license_plate, color):
-        super().__init__(license_plate, color, "bike")
-
-
-class Car(Vehicle):
-    def __init__(self, license_plate, color):
-        super().__init__(license_plate, color, "car")
-
-
-class Bus(Vehicle):
-    def __init__(self, license_plate, color):
-        super().__init__(license_plate, color, "bus")
