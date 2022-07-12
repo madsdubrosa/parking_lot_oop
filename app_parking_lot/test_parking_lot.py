@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from parking_lot_oop.app_parking_lot.parking_lot import ParkingLot
-from parking_lot_oop.app_parking_lot.vehicle import Vehicle
+from app_parking_lot.parking_lot import ParkingLot
+from app_parking_lot.vehicle import Vehicle
 
 
 class Test_Parking_Lot(TestCase):
