@@ -1,7 +1,7 @@
 from pprint import pprint
 
-from test_applications.oop.app_parking_lot.parking_lot import ParkingLot
-from test_applications.oop.app_parking_lot.vehicle import Vehicle
+from parking_lot_oop.app_parking_lot.parking_lot import ParkingLot
+from parking_lot_oop.app_parking_lot.vehicle import Vehicle
 
 
 def main():
@@ -31,8 +31,6 @@ def main():
     lot.sell_spot(bike_2, 1)
     lot.extend_spot(bike_2.license_plate, 30)
 
-    # for i in range(48):
-    #     lot.empty_spot(f"{i}")
     lot.bulk_empty_spots([str(i) for i in range(48)])
 
 
