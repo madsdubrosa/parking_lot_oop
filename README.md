@@ -1,6 +1,6 @@
 # parking_lot_oop
 
-Parking lot designed using Object Oriented Design.
+Parking lot designed using object oriented design.
 
 parking_lot.py contains the class definition of the parking lot, as well as a parking spot. vehicle.py contains the class definition for different types of vehicles that would be parked in the parking lot (i.e., bikes, cars, and buses). 
 
